@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kt5dalzi4-java-springboot-gitops
+  description: This is GitOps manifest for kt5dalzi4-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: kt5dalzi4-java-springboot
+    janus-idp.io/tekton: kt5dalzi4-java-springboot 
+    backstage.io/kubernetes-id: kt5dalzi4-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:kt5dalzi4-java-springboot
